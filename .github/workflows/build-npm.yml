@@ -1,0 +1,36 @@
+name: Build npm Package
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          submodules: recursive
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      - name: Build Package
+        run: |
+          yarn
+          yarn build
+          yarn pack --filename miraigo.tgz
+        shell: bash
+
+      - uses: actions/upload-artifact@v3
+        with:
+          name: miraigo-${{ github.sha }}
+          path: miraigo.tgz
