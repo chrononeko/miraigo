@@ -179,9 +179,44 @@ message UinPairMessage {
 }
 
 message Message {
-  optional MessageHead head = 1;
-  optional ContentHead content = 2;
+  optional MessageHead2 head = 1;
+  optional ContentHead2 content = 2;
   optional MessageBody body = 3;
+}
+
+message MessageHead2 {
+  optional string field2 = 2;
+  optional string field6 = 6;
+  optional MessageHead2Field7 field7 = 7;
+  optional MessageHead2Field8 field8 = 8;
+}
+
+message MessageHead2Field7 {
+  optional string field6 = 6;
+}
+
+message MessageHead2Field8 {
+  optional int64 field1 = 1;
+  optional string field4 = 4;
+}
+
+message ContentHead2 {
+  optional int32 field1 = 1;
+  optional int32 field2 = 2;
+  optional int32 field3 = 3;
+  optional int32 field4 = 4;
+  optional int32 field5 = 5;
+  optional int32 field6 = 6;
+  optional int32 field7 = 7;
+  optional int32 field8 = 8;
+  optional int32 field9 = 9;
+  optional int32 field11 = 11;
+  optional ContentHead2Field15 field15 = 15;
+}
+
+message ContentHead2Field15 {
+  optional int32 field1 = 1;
+  optional int32 field2 = 2;
 }
 
 message MessageBody {
