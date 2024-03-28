@@ -104,4 +104,5 @@ message DED3ReqBody {
   int32 msgSeq = 3;
   int32 msgRand = 4;
   int64 aioUin = 5;
+  int32 field6 = 6;
 }
