@@ -11,6 +11,7 @@ message OIDBSSOPkg {
   bytes bodybuffer = 4;
   string errorMsg = 5;
   string clientVersion = 6;
+  int32 field12 = 12;
 }
 
 message D8A0RspBody {
