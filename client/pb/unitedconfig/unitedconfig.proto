@@ -1,0 +1,55 @@
+syntax = "proto3";
+
+option optimize_for = LITE_RUNTIME;
+
+message SsoGetConfigReqBody {
+  SsoGetConfigReqBodyField1 field1 = 1;
+  SsoGetConfigReqBodyField3 field3 = 3;
+  SsoGetConfigReqBodyField5 field5 = 5;
+  SsoGetConfigReqBodyField6 field6 = 6;
+  repeated SsoGetConfigReqBodyField7 field7 = 7;
+  SsoGetConfigReqBodyField8 field8 = 8;
+  int32 field9 = 9;
+  SsoGetConfigReqBodyField10 field10 = 10;
+  string field11 = 11;
+}
+
+message SsoGetConfigReqBodyField1 {
+  int32 field1 = 1;
+  int32 field2 = 2;
+}
+
+message SsoGetConfigReqBodyField3 {
+  string field1 = 1;
+  string field2 = 2;
+  SsoGetConfigReqBodyField3Field3 field3 = 3;
+}
+
+message SsoGetConfigReqBodyField3Field3 {
+  int32 field1 = 1;
+  string field2 = 2;
+}
+
+message SsoGetConfigReqBodyField5 {
+  string field1 = 1;
+  string field3 = 3;
+}
+
+message SsoGetConfigReqBodyField6 {
+  string field1 = 1;
+  string field2 = 2;
+  int32 field4 = 4;
+  int32 field5 = 5;
+}
+
+message SsoGetConfigReqBodyField7 {
+  string field1 = 1;
+}
+
+message SsoGetConfigReqBodyField8 {
+  int64 field1 = 1;
+}
+
+message SsoGetConfigReqBodyField10 {
+  string field2 = 2;
+}
