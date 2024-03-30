@@ -187,7 +187,9 @@ message Message {
 }
 
 message MessageHead2 {
+  optional int64 field1 = 1;
   optional string field2 = 2;
+  optional int64 field5 = 5;
   optional string field6 = 6;
   optional MessageHead2Field7 field7 = 7;
   optional MessageHead2Field8 field8 = 8;
@@ -213,6 +215,8 @@ message ContentHead2 {
   optional int32 field8 = 8;
   optional int32 field9 = 9;
   optional int32 field11 = 11;
+  optional int32 field12 = 12;
+  optional int32 field13 = 13;
   optional ContentHead2Field15 field15 = 15;
 }
 
